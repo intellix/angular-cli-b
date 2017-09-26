@@ -1,3 +1,14 @@
 <red-header></red-header>
 
+<ul>
+  <li>
+    <a [routerLink]="['/']" routerLinkActive="active">Home</a>
+  </li>
+  <li>
+    <a [routerLink]="['/lazy']" routerLinkActive="active">Lazy</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
+
 <h1>Welcome to {{ title }}!</h1>

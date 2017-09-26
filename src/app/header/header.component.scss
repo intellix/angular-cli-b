@@ -2,6 +2,8 @@
 
 :host {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 250px;
   background: $brand-primary;
 }

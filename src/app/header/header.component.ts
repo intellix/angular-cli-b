@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'red-header',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  url$ = this.appService.navigationEnd$.pipe(
+    map(v => v.url),
+  );
+
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
   }
