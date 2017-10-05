@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   constructor(private appService: AppService) { }
 
   ngOnInit() {
+    this.appService.thing.subscribe(console.log);
   }
 
 }
