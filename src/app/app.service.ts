@@ -8,8 +8,8 @@ import { filter } from 'rxjs/operators';
 export class AppService {
 
   thing = of('thing');
-  navigationEnd$: Observable<NavigationEnd> = this.router.events.pipe(
-    filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+  navigationEnd$ = of({ url: 'lol' }).pipe(
+    filter(v => v.url === 'lol'),
   );
 
   constructor(private router: Router) { }
